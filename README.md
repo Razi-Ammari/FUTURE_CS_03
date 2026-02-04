@@ -1,189 +1,209 @@
-🔐 API Security Risk Analysis
+🔐 API Security Risk Analysis – Public Demo API
 
-Cyber Security Task 3 – Future Interns (2026)
+(Future Interns – Cyber Security Task 3)
 
-📌 Project Overview
+📌 Executive Summary
 
-This project presents a professional API Security Risk Analysis performed on a public demo API, following a real-world SaaS security assessment methodology.
-The objective is to identify common API security weaknesses, explain their business impact, and propose clear remediation strategies — without exploiting or attacking systems.
+Modern SaaS platforms rely heavily on APIs to power applications, integrations, and data flows. While APIs enable scalability and flexibility, insecure API designs introduce critical business risks including unauthorized data access, privacy violations, and service abuse.
 
-This task reflects how security agencies, AppSec teams, and SaaS consultants perform read-only API risk assessments for clients.
+This project presents a professional, read-only API Security Risk Analysis conducted on a public demo API. The goal is to identify common API security weaknesses, assess their business impact, and propose practical remediation strategies, following real-world AppSec consulting methodologies.
+
+This work reflects how security agencies and SaaS security teams evaluate API exposure — focusing on risk identification, not exploitation.
 
 🎯 Objectives
 
-Analyze public/demo APIs safely and ethically
+Analyze a public API endpoint in a safe and ethical manner
 
-Identify common API security risks
+Identify common API security risks aligned with OWASP API Security Top 10
 
-Assess authentication & authorization weaknesses
+Evaluate authentication, authorization, and exposure controls
 
-Evaluate data exposure risks
+Translate technical risks into business-friendly impact explanations
 
-Explain security issues in business-friendly language
+Provide clear, actionable remediation recommendations
 
-Provide actionable remediation recommendations
+🧭 Scope & Ethics
 
-🛡️ Scope & Ethics
+✔ Allowed
 
-Allowed
-
-Public/demo APIs only
+Public / demo APIs only
 
 Read-only requests (GET)
 
+Header, response, and access control inspection
+
 Documentation-based analysis
 
-Header, response, and access inspection
-
-Not Allowed
+❌ Not Allowed
 
 Exploitation or bypass attempts
 
-DoS or stress testing
+Denial-of-Service testing
 
-Testing private or production APIs
+Attacking private or production APIs
 
-✔ This project follows ethical security research principles.
+This assessment follows ethical security consulting standards.
 
-🧪 API Tested
+🛠 Tools & Technologies
+
+Postman – API request testing & response inspection
+
+Browser DevTools – Header and request analysis
+
+Public Demo API – JSONPlaceholder
+
+Markdown Documentation – Professional reporting
+
+GitHub – Transparent project delivery
+
+🌐 API Under Assessment
 
 API Name: JSONPlaceholder (Public Demo API)
 
 Base URL: https://jsonplaceholder.typicode.com
 
-Endpoint Analyzed: GET /users
+Endpoint Tested: GET /users
 
 Authentication: None
 
-Purpose: Identify real-world API security risks
+Testing Scope: Read-only analysis
 
-🛠️ Tools Used
+🔍 Key Security Findings
 
-Postman – API request testing & response inspection
+The analysis identified multiple risks commonly seen in real SaaS environments:
 
-Browser DevTools – Header and response analysis
+1️⃣ Open / Unauthenticated Endpoint — High Risk
 
-Markdown / PDF – Professional documentation
+Endpoint accessible without authentication
 
-🔍 Methodology
+No API keys, tokens, or user validation required
 
-Review API documentation
+Enables unrestricted external access
 
-Identify exposed endpoints
+Business Impact
 
-Test endpoints using Postman
+Unauthorized data access
 
-Inspect authentication & authorization mechanisms
+Large-scale data scraping
 
-Analyze response data for overexposure
+Increased exposure to privacy incidents
 
-Identify missing security controls
+2️⃣ Excessive Data Exposure — High Risk
 
-Classify risks by severity
+API returns full user profiles including:
 
-Propose remediation actions
+Email addresses
 
-🚨 Identified Security Risks
-Risk	Severity
-Open / Unauthenticated Endpoint	🔴 High
-Excessive Data Exposure	🔴 High
-Missing Authorization Controls	🟠 Medium-High
-Missing Rate Limiting	🟡 Medium
-Key Findings
+Phone numbers
 
-Public access to user data without authentication
+Physical addresses
 
-Exposure of sensitive personal information
+Geo-location data
 
-No role-based or user-specific access control
+Company details
 
-No visible request throttling or abuse prevention
+Business Impact
 
-🧩 Business Impact
-
-Unauthorized access to sensitive data
+User privacy violations
 
 Increased phishing & social engineering risk
 
-Privacy and regulatory compliance concerns
+Regulatory and compliance concerns
 
-Service abuse and performance degradation
+3️⃣ Missing Authorization Controls — Medium–High Risk
 
-Higher operational and infrastructure costs
+No role-based or user-specific access control
 
-🛠️ Recommended Remediation
+No enforcement of data ownership
 
-Implement authentication (API keys, OAuth 2.0, JWT)
+Business Impact
 
-Enforce authorization checks per user and role
+Horizontal data exposure
 
-Apply least-privilege and data minimization
+Unauthorized access to entire datasets
 
-Introduce rate limiting and throttling
+4️⃣ Missing Rate Limiting — Medium Risk
 
-Enable logging, monitoring, and alerting
+No evidence of request throttling or abuse prevention
 
-Regularly review APIs using OWASP API Security Top 10
+Endpoint vulnerable to automation and scraping
 
-📂 Repository Structure
+Business Impact
+
+Service performance degradation
+
+Increased infrastructure costs
+
+Potential denial-of-service scenarios
+
+📊 Risk Classification Summary
+Risk Category	Severity
+Open Endpoint	High
+Excessive Data Exposure	High
+Missing Authorization	Medium–High
+Missing Rate Limiting	Medium
+🛡 Recommended Remediation Actions
+
+Enforce authentication (API keys, OAuth 2.0, JWT)
+
+Apply strict authorization and access control checks
+
+Limit API responses using least privilege principles
+
+Introduce rate limiting and request throttling
+
+Implement API logging and monitoring
+
+Align API security posture with OWASP API Security Top 10
+
+📁 Repository Structure
+
 FUTURE_CS_03/
 │
 ├── analysis/
 │   └── api_risk_analysis_users_endpoint.md
 │
-├── report/
-│   └── API_Security_Risk_Analysis_Report.pdf
-│
 ├── screenshots/
 │   ├── step1_git_initialization.png
 │   ├── step2_api_documentation_review.png
 │   ├── step3_postman_launch.png
-│   ├── step4_users_endpoint_postman.png
+│   ├── step4_users_endpoint_exposure.png
 │   └── step5_api_risk_analysis_written.png
+│
+├── report/
+│   └── API_Security_Risk_Analysis_Report.pdf
 │
 └── README.md
 
-📸 Screenshots Included
-
-Git repository initialization
-
-API documentation review
-
-Postman setup and launch
-
-Users endpoint response analysis
-
-Written API risk analysis
-
-Each screenshot is referenced directly inside the report for traceability.
-
-📚 References (Study Only)
-
-OWASP API Security Top 10
-https://github.com/OWASP/API-Security
-
-Public APIs for Testing
-https://github.com/public-apis/public-apis
-
-JSONPlaceholder API
-https://jsonplaceholder.typicode.com
-
-✅ Final Notes
-
-This project demonstrates modern API security thinking, focusing on:
-
-Risk identification (not exploitation)
-
-Business impact analysis
-
-Client-ready documentation
-
-SaaS security fundamentals
-
-🎯 Strong fit for:
+💼 Professional Value
+This project demonstrates skills directly applicable to:
 
 AppSec Engineer
 
 Security Analyst
 
+SOC Analyst
+
 SaaS Security Consultant
+
+GRC & Risk Assessment Roles
+
+The methodology mirrors paid API security audits performed by cybersecurity agencies and internal security teams.
+
+📚 References (Study Only)
+OWASP API Security Top 10
+https://github.com/OWASP/API-Security
+
+API Security Checklist
+https://github.com/shieldfy/API-Security-Checklist
+
+Public APIs Collection
+https://github.com/public-apis/public-apis
+
+👤 Author
+Razi Ammari
+Cyber Security & API Security Enthusiast
+Future Interns – Cyber Security Program (2026)
+
+🏁 Final Note
+This repository showcases security thinking, risk assessment, and communication skills — the exact combination required in modern cybersecurity roles.
