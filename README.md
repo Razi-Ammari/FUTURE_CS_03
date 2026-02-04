@@ -191,6 +191,7 @@ GRC & Risk Assessment Roles
 The methodology mirrors paid API security audits performed by cybersecurity agencies and internal security teams.
 
 📚 References (Study Only)
+
 OWASP API Security Top 10
 https://github.com/OWASP/API-Security
 
