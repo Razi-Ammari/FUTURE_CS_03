@@ -156,25 +156,6 @@ Implement API logging and monitoring
 
 Align API security posture with OWASP API Security Top 10
 
-📁 Repository Structure
-
-FUTURE_CS_03/
-│
-├── analysis/
-│   └── api_risk_analysis_users_endpoint.md
-│
-├── screenshots/
-│   ├── step1_git_initialization.png
-│   ├── step2_api_documentation_review.png
-│   ├── step3_postman_launch.png
-│   ├── step4_users_endpoint_exposure.png
-│   └── step5_api_risk_analysis_written.png
-│
-├── report/
-│   └── API_Security_Risk_Analysis_Report.pdf
-│
-└── README.md
-
 💼 Professional Value
 This project demonstrates skills directly applicable to:
 
